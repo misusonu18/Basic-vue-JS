@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS Project</title>
+</head>
+<body>
+    <div id="hello">
+        {{ message }}
+    </div> </br>
+    <hr>
+
+    <div id="conditional">
+        <p>{{ conditional }}</p>
+        <p v-if='a > 10'>A is Big</p>
+        <p v-else-if='b > 10'>B is Big</p>
+        <p v-else>C is Big</p>
+    </div>
+    <hr>
+
+    <div id="model">
+        <label>Name:</label>
+        <input type="text" v-model='message'>
+        <p>message is: {{ message }}</p>
+    </div>    
+    <hr>
+
+    <div id="toggling">
+        <template v-if='seen'>
+            <label>Username</label>
+            <input type="text" placeholder="Username">
+        </template>
+        <template v-else>
+            <label>Email</label>
+            <input type="text" placeholder="Email">
+        </template>
+        <button @click='seen = !seen'>Toggle</button>
+    </div>
+    <hr>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
