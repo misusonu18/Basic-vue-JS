@@ -1,30 +1,37 @@
 var app = new Vue({
-    el:'#hello',
+    el: "#hello",
     data:{
-        message : 'Welcome to vue Js'
+        message: "Welcome to vue Js"
     }
 });
 
 var app1 = new Vue({
-    el:'#conditional',
+    el: "#conditional",
     data: {
-        conditional : 'Checking which is Bigger (A, B, C)',
-        a:1,
-        b:20,
-        c:10
+        conditional: "Checking which is Bigger (A, B, C)",
+        a: 1,
+        b: 20,
+        c: 10
     }
 });
 
 var app2 = new Vue({
-    el:'#toggling',
+    el: "#toggling",
     data:{
-        seen:true
+        seen: true
     }
 });
 
 var app3 = new Vue({
-    el: '#model',
+    el: "#model",
     data: {
-        message: ''
+        message: ""
+    }
+});
+
+var app4 = new Vue({
+    el: "#check",
+    data: {
+        check: "" 
     }
 });
