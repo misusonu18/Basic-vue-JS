@@ -13,8 +13,8 @@
 
     <div id="conditional">
         <p>{{ conditional }}</p>
-        <p v-if='a > 10'>A is Big</p>
-        <p v-else-if='b > 10'>B is Big</p>
+        <p v-if="a > 10">A is Big</p>
+        <p v-else-if="b > 10">B is Big</p>
         <p v-else>C is Big</p>
     </div>
     <hr>
@@ -27,7 +27,7 @@
     <hr>
 
     <div id="toggling">
-        <template v-if='seen'>
+        <template v-if="seen">
             <label>Username</label>
             <input type="text" placeholder="Username">
         </template>
@@ -38,6 +38,14 @@
         <button @click='seen = !seen'>Toggle</button>
     </div>
     <hr>
+
+    <div id="check">
+        <label>Enter the Value</label>
+        <input type="number" v-model="check">
+        <p v-if="check >= 100">Century</p>
+        <p v-else-if="check < 100 && check != ''">Half Century</p>
+        <p v-else></p>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="/js/app.js"></script>
 </body>
