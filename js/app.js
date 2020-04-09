@@ -35,3 +35,38 @@ var app4 = new Vue({
         check: "" 
     }
 });
+
+var app5 = new Vue({
+    el: "#calculator",
+    data: {
+        selected: "",
+        number1: "",
+        number2: "",
+        total: ""
+    },
+
+    methods: {
+        calculator: function() {
+            if (this.selected == "addition") {
+                let a = parseInt(this.number1);
+                let b = parseInt(this.number2);
+                this.total = a + b;
+            }
+            if (this.selected == "subtration") {
+                let a = parseInt(this.number1);
+                let b = parseInt(this.number2);
+                this.total = a - b;
+            }
+            if (this.selected == "multiply") {
+                let a = parseInt(this.number1);
+                let b = parseInt(this.number2);
+                this.total = a * b;
+            }
+            if (this.selected == "divide") {
+                let a = parseInt(this.number1);
+                let b = parseInt(this.number2);
+                this.total = a / b;
+            }
+        }
+    }
+});
