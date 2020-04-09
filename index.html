@@ -46,6 +46,30 @@
         <p v-else-if="check < 100 && check != ''">Half Century</p>
         <p v-else></p>
     </div>
+    <hr>
+
+    <h1>Simple calculator</h1>
+
+    <div id="calculator">
+        <label>Select The Operator</label>
+        <select v-model="selected">
+            <option value="" selected>Select type of operator</option>
+            <option value="addition">Addition</option>
+            <option value="subtraction">Subtraction</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+        </select><br><br>
+
+        <div>
+            <label>Enter A</label>
+            <input type="number" v-model="number1"><br><br>
+
+            <label>Enter B</label>
+            <input type="number" v-model="number2"><br><br>
+            <button v-if="selected" v-on:click="calculator">{{ selected }}</button>
+        </div>
+        <p v-if='total'>Total is: {{ total }}</p>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="/js/app.js"></script>
 </body>
